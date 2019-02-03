@@ -2,10 +2,6 @@
 <html lang="nb">
   <meta charset="utf-8" />
   <link rel="home" href="{{ siteUrl }}" />
-  <link
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
-    rel="stylesheet"
-  />
   <meta name="viewport" content="initial-scale=1, user-scalable=yes" />
   <link
     rel="apple-touch-icon"
@@ -56,16 +52,23 @@
     })();
   </script>
   {% endif %}
-  <title>Hva med julemat?</title>
+  <title>Hva med dette til jul?</title>
   <style>
     html {
-      font-family: roboto, sans-serif;
+      font-family: system-ui, /* macOS 10.11-10.12 */ -apple-system,
+        /* Windows 6+ */ Segoe UI, /* Android 4+ */ Roboto,
+        /* Ubuntu 10.10+ */ Ubuntu, /* Gnome 3+ */ Cantarell,
+        /* KDE Plasma 5+ */ Noto Sans, /* fallback */ sans-serif,
+        /* macOS emoji */ "Apple Color Emoji",
+        /* Windows emoji */ "Segoe UI Emoji",
+        /* Windows emoji */ "Segoe UI Symbol",
+        /* Linux emoji */ "Noto Color Emoji";
       padding-top: 6vh;
       padding-left: 6vw;
     }
     h1 {
-      font-size: 3rem;
-      margin-bottom: 1.8em;
+      font-size: 2.4rem;
+      margin-bottom: 7vh;
     }
     h2 {
       font-weight: 400;
@@ -73,7 +76,11 @@
     button {
       padding: 0.4em 0.8em;
       font-size: 1rem;
-      margin-bottom: 3em;
+      margin-bottom: 16vh;
+      background-color: hsl(0, 0%, 85%)
+    }
+    button:hover, button:active {
+      background-color: hsl(0, 0%, 95%)
     }
     footer {
       font-size: 0.8rem;
