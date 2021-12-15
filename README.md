@@ -1,2 +1,2 @@
 # Julemat
-## Christmas food generator
+https://8yd.no/labs/julemat/
