@@ -21,24 +21,25 @@
     })();
   </script>
   <style>
+        html,
+    button {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+        font-size: 1rem;
+        font-size: clamp(1rem, calc(0.9rem + 0.35vw), 1.2rem);
+    }
     html {
-      font-family: system-ui, /* macOS 10.11-10.12 */ -apple-system,
-        /* Windows 6+ */ Segoe UI, /* Android 4+ */ Roboto,
-        /* Ubuntu 10.10+ */ Ubuntu, /* Gnome 3+ */ Cantarell,
-        /* KDE Plasma 5+ */ Noto Sans, /* fallback */ sans-serif,
-        /* macOS emoji */ "Apple Color Emoji",
-        /* Windows emoji */ "Segoe UI Emoji",
-        /* Windows emoji */ "Segoe UI Symbol",
-        /* Linux emoji */ "Noto Color Emoji";
       padding-top: 6vh;
       padding-left: 6vw;
     }
     h1 {
       font-weight: 400;
-      font-size: 1.5rem;
+      font-size: 1.17rem;
+      font-size: clamp(1.17rem, calc(1rem + 0.75vw), 1.48rem);
     }
     h2 {
-      font-size: 2.4rem;
+      font-size: 1.45rem;
+      font-size: clamp(1.45rem, calc(1.35rem + 1.2vw), 2.3rem);
       margin-bottom: 7vh;
     }
     button {
@@ -47,14 +48,6 @@
       font-size: 1rem;
       margin-bottom: 16vh;
       background-color: hsl(0, 0%, 92%);
-      font-family: system-ui, /* macOS 10.11-10.12 */ -apple-system,
-        /* Windows 6+ */ Segoe UI, /* Android 4+ */ Roboto,
-        /* Ubuntu 10.10+ */ Ubuntu, /* Gnome 3+ */ Cantarell,
-        /* KDE Plasma 5+ */ Noto Sans, /* fallback */ sans-serif,
-        /* macOS emoji */ "Apple Color Emoji",
-        /* Windows emoji */ "Segoe UI Emoji",
-        /* Windows emoji */ "Segoe UI Symbol",
-        /* Linux emoji */ "Noto Color Emoji";
     }
     button:hover
     {
@@ -69,9 +62,11 @@
   </style>
   <h1>Usikker på hva du skal lage i jula?</h1>
   <h2></h2>
-  <button>Få nytt forslag</button>
+  <button type="button">Få nytt forslag</button>
   <footer>
-    <a href="http://8yd.no">8yd.no</a> – Basert på ide fra
+    <a href="http://8yd.no">8yd.no</a><br>
+    Se også <a href="http:/bankid.8yd.no">Ikke BankID</a><br>
+    Basert på ide fra
     <a href="http://77.aurlien.net/">77 slag</a>
   </footer>
   <script>
@@ -149,8 +144,7 @@
       h1.innerHTML = generate()
     }
 
-    btn.addEventListener("click", function (e) {
-      e.preventDefault()
+    btn.addEventListener("click", function () {
       xmas()
     })
     xmas()
